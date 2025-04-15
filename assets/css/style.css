@@ -666,6 +666,15 @@ main {
    * #testimonials-modal
    */
 
+.content-card [data-testimonials-date] {
+  display: none;
+}
+
+#quote-icon {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(76%) saturate(3103%)
+    hue-rotate(246deg) brightness(98%) contrast(106%);
+}
+
 .modal-container {
   position: fixed;
   top: 0;
@@ -826,6 +835,10 @@ main {
     hue-rotate(314deg) brightness(94%) contrast(94%);
 }
 #the-grife {
+  height: 120px;
+}
+#labiras {
+  height: 100px;
 }
 .clients-item img:hover {
   filter: brightness(0) saturate(100%) invert(42%) sepia(76%) saturate(3103%)

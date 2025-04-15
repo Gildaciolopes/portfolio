@@ -24,6 +24,7 @@ const overlay = document.querySelector("[data-overlay]");
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
+const modalDate = document.querySelector("[data-modal-date]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
@@ -32,20 +33,30 @@ const testimonialsModalFunc = function () {
 };
 
 // add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-  testimonialsItem[i].addEventListener("click", function () {
+testimonialsItem.forEach((item) => {
+  item.addEventListener("click", function () {
+    // imagem, título e texto (igual ao que você já tinha)
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector(
+    modalTitle.textContent = this.querySelector(
       "[data-testimonials-title]"
-    ).innerHTML;
+    ).textContent;
     modalText.innerHTML = this.querySelector(
       "[data-testimonials-text]"
     ).innerHTML;
 
+    // ** pegar a data do card e jogar no modal **
+    const cardDateEl = this.querySelector("[data-testimonials-date]");
+    if (cardDateEl) {
+      // atualiza o atributo datetime
+      modalDate.setAttribute("datetime", cardDateEl.getAttribute("datetime"));
+      // atualiza o texto visível
+      modalDate.textContent = cardDateEl.textContent;
+    }
+
     testimonialsModalFunc();
   });
-}
+});
 
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
