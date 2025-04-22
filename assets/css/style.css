@@ -1080,7 +1080,7 @@ main {
 .project-img {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 100%;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -1130,7 +1130,7 @@ main {
 
 .project-img img {
   width: 100%;
-  height: 150px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   transition: var(--transition-1);
