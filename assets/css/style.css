@@ -1403,9 +1403,11 @@ textarea.form-input::-webkit-resizer {
       hue-rotate(246deg) brightness(98%) contrast(106%);
   }
 }
-#labiras,
+#labiras {
+  height: 70px;
+}
 #the-grife {
-  height: 80px;
+  height: 90px;
 }
 .gap {
   padding: 0 20px;
@@ -1777,6 +1779,13 @@ textarea.form-input::-webkit-resizer {
      * REUSED STYLE
      */
 
+  #labiras {
+    height: 92px;
+  }
+  #the-grife {
+    height: 120px;
+  }
+
   .sidebar,
   article {
     width: 700px;
@@ -2039,7 +2048,12 @@ textarea.form-input::-webkit-resizer {
   /**
      * REUSED STYLE
      */
-
+  #labiras {
+    height: 95px;
+  }
+  #the-grife {
+    height: 120px;
+  }
   .sidebar,
   article {
     width: auto;
