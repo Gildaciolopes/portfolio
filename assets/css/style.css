@@ -43,8 +43,8 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(273, 100%, 66.3%);
-  --vegas-gold: hsl(273, 100%, 66.3%);
+  --purple-primary: hsl(273, 100%, 66.3%);
+  --purple-secondary: hsl(273, 100%, 66.3%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -136,12 +136,12 @@ textarea {
 }
 
 ::selection {
-  background: var(--orange-yellow-crayola);
+  background: var(--purple-primary);
   color: var(--smoky-black);
 }
 
 :focus {
-  outline-color: var(--orange-yellow-crayola);
+  outline-color: var(--purple-primary);
 }
 
 html {
@@ -183,7 +183,7 @@ article {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: var(--orange-yellow-crayola);
+  color: var(--purple-primary);
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
@@ -273,7 +273,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
+  background: var(--purple-primary);
   border-radius: 5px;
 }
 
@@ -369,7 +369,7 @@ main {
   right: -15px;
   border-radius: 0 15px;
   font-size: 13px;
-  color: var(--orange-yellow-crayola);
+  color: var(--purple-primary);
   background: var(--border-gradient-onyx);
   padding: 10px;
   box-shadow: var(--shadow-2);
@@ -507,8 +507,8 @@ main {
 }
 
 .navbar-link.active {
-  color: var(--orange-yellow-crayola);
-  border-bottom: 2px solid var(--orange-yellow-crayola);
+  color: var(--purple-primary);
+  border-bottom: 2px solid var(--purple-primary);
   transform: scale(1);
 
   &:hover {
@@ -894,7 +894,7 @@ main {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  color: var(--purple-secondary);
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
@@ -1106,7 +1106,7 @@ main {
   --scale: 0.8;
 
   background: var(--jet);
-  color: var(--orange-yellow-crayola);
+  color: var(--purple-primary);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1240,7 +1240,7 @@ main {
 }
 
 .artigos-post-item > a:hover .artigos-item-title {
-  color: var(--orange-yellow-crayola);
+  color: var(--purple-primary);
 }
 
 .artigos-text {
@@ -1305,7 +1305,7 @@ main {
 }
 
 .form-input:focus {
-  border-color: var(--orange-yellow-crayola);
+  border-color: var(--purple-primary);
 }
 
 textarea.form-input {
@@ -1328,7 +1328,7 @@ textarea.form-input::-webkit-resizer {
   position: relative;
   width: 100%;
   background: var(--border-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  color: var(--purple-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1859,7 +1859,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .filter-item button.active {
-    color: var(--orange-yellow-crayola);
+    color: var(--purple-primary);
   }
 
   /* projetos and artigos grid */
