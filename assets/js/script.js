@@ -161,9 +161,6 @@ function addAnimation() {
     // add data-animated="true" to every `.scroller` on the page
     scroller.setAttribute("data-animated", true);
 
-    if (duplicatedItem.hasAttribute("data-cloned")) return;
-    duplicatedItem.setAttribute("data-cloned", "true");
-
     // Make an array from the elements within `.scroller-inner`
     const scrollerInner = scroller.querySelector(".scroller__inner");
     const scrollerContent = Array.from(scrollerInner.children);
