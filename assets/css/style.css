@@ -357,7 +357,7 @@ main {
   color: var(--white-1);
   background: #000;
   font-size: var(--fs-8);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
@@ -527,7 +527,7 @@ main {
 .sobre-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -540,7 +540,7 @@ main {
    */
 
 .service {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .service-title {
@@ -590,7 +590,7 @@ main {
 .service-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-3);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -652,7 +652,7 @@ main {
 .testimonials-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
   display: -webkit-box;
   line-clamp: 4;
@@ -789,14 +789,14 @@ main {
 .modal-content time {
   font-size: var(--fs-6);
   color: var(--light-gray-70);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   margin-bottom: 10px;
 }
 
 .modal-content p {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -923,7 +923,7 @@ main {
 
 .timeline-text {
   color: var(--light-gray);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -965,7 +965,7 @@ main {
 .skill .title-wrapper data {
   color: var(--light-gray);
   font-size: var(--fs-7);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
 }
 
 .skill-progress-bg {
@@ -1005,7 +1005,7 @@ main {
   border: 1px solid var(--jet);
   border-radius: 14px;
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
 }
 
 .filter-select.active .select-icon {
@@ -1037,7 +1037,7 @@ main {
   background: var(--eerie-black-2);
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   text-transform: capitalize;
   width: 100%;
   padding: 8px 10px;
@@ -1155,7 +1155,7 @@ main {
 .project-category {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
 }
 
 /*-----------------------------------*\
@@ -1223,7 +1223,7 @@ main {
 .artigos-meta :is(.artigos-category, time) {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
 }
 
 .artigos-meta .dot {
@@ -1246,7 +1246,7 @@ main {
 .artigos-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -2134,7 +2134,7 @@ textarea.form-input::-webkit-resizer {
 
   .contact-info :is(.contact-link, time, address) {
     --fs-7: 14px;
-    font-weight: var(--fw-300);
+    font-weight: var(--fw-400);
   }
 
   .separator:last-of-type {
