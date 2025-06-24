@@ -33,7 +33,7 @@
 
 .scroller[data-animated="true"] .scroller__inner:hover {
   animation-play-state: paused;
-  scale: 1.05;
+  scale: 1.02;
   cursor: pointer;
 }
 
@@ -81,4 +81,9 @@
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--smoky-black);
+  transition: scale 0.5s ease;
+
+  &:hover {
+    scale: 1.08;
+  }
 }
