@@ -55,7 +55,7 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(60%);
+    transform: translateX(45%);
   }
   100% {
     transform: translateX(-100%);
@@ -67,6 +67,7 @@
 :root {
   --light-gray: hsl(0, 0%, 84%);
   --smoky-black: hsl(0, 0%, 7%);
+  --purple-primary: hsl(273, 100%, 66.3%);
 }
 
 .tag-list {
@@ -77,6 +78,9 @@
 }
 
 .tag-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   color: var(--light-gray);
   padding: 1rem;
   border-radius: 0.5rem;
@@ -84,6 +88,12 @@
   transition: scale 0.5s ease;
 
   &:hover {
+    color: var(--purple-primary);
     scale: 1.08;
+  }
+
+  & img {
+    width: 22px;
+    border-radius: 12%;
   }
 }
