@@ -46,16 +46,16 @@
 }
 
 .scroller[data-speed="fast"] {
-  --_animation-duration: 15s;
+  --_animation-duration: 20s;
 }
 
 .scroller[data-speed="slow"] {
-  --_animation-duration: 25s;
+  --_animation-duration: 30s;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(45%);
+    transform: translateX(40%);
   }
   100% {
     transform: translateX(-100%);
