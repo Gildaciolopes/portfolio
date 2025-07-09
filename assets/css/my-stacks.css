@@ -1,13 +1,15 @@
 .scroller {
   min-width: 100%;
+  overflow: hidden;
+  position: relative;
   margin-bottom: 5px;
 }
 
 .scroller__inner {
   padding-block: 1rem;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: max-content;
   gap: 1rem;
   transition: scale 0.5s ease;
 }
@@ -55,11 +57,15 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(40%);
+    transform: translateX(8px);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
+}
+
+.scroller__inner > * {
+  flex: 0 0 auto;
 }
 
 /* general styles */
