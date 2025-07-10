@@ -9,6 +9,7 @@
   padding-block: 1rem;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: flex-start;
   width: max-content;
   gap: 1rem;
   transition: scale 0.5s ease;
@@ -28,7 +29,6 @@
 
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
-  flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s)
     var(--_animation-direction, forwards) linear infinite;
 }
@@ -57,15 +57,11 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(8px);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-50.2%);
   }
-}
-
-.scroller__inner > * {
-  flex: 0 0 auto;
 }
 
 /* general styles */
@@ -100,6 +96,9 @@
 
   & img {
     width: 22px;
-    border-radius: 12%;
   }
+}
+
+#jsts {
+  border-radius: 12%;
 }
