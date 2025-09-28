@@ -91,6 +91,171 @@
 }
 
 /*-----------------------------------*\
+    #GITHUB CALENDAR
+  \*-----------------------------------*/
+
+.github-calendar-card {
+  background: var(--bg-gradient-jet);
+  border: 1px solid var(--border-gradient-onyx);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+}
+
+.github-calendar-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-3);
+}
+
+.github-calendar-header {
+  margin-bottom: 16px;
+}
+
+.github-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white-1);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+}
+
+.github-logo svg {
+  color: var(--white-1);
+}
+
+.github-calendar-grid {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.calendar-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contribution-square {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  transition: var(--transition-1);
+  cursor: pointer;
+}
+
+.contribution-square:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.contribution-square.empty {
+  background: transparent;
+}
+
+.contribution-square.level-0 {
+  background: var(--eerie-black-1);
+  border: 1px solid var(--onyx);
+}
+
+.contribution-square.level-1 {
+  background: hsl(258, 80.3%, 50%);
+}
+
+.contribution-square.level-2 {
+  background: hsl(258, 80.3%, 65%);
+}
+
+.contribution-square.level-3 {
+  background: hsl(258, 80.3%, 80%);
+}
+
+.contribution-square.level-4 {
+  background: var(--purple-primary);
+}
+
+.github-calendar-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--light-gray);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-7);
+}
+
+.legend-squares {
+  display: flex;
+  gap: 2px;
+}
+
+.legend-square {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.legend-square.level-0 {
+  background: var(--eerie-black-1);
+  border: 1px solid var(--onyx);
+}
+
+.legend-square.level-1 {
+  background: hsl(258, 80.3%, 50%);
+}
+
+.legend-square.level-2 {
+  background: hsl(258, 80.3%, 65%);
+}
+
+.legend-square.level-3 {
+  background: hsl(258, 80.3%, 80%);
+}
+
+.legend-square.level-4 {
+  background: var(--purple-primary);
+}
+
+.legend-text {
+  font-size: var(--fs-8);
+  color: var(--light-gray-70);
+}
+
+.github-calendar-card.error {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.error-message {
+  color: var(--light-gray);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .github-calendar-card {
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  .contribution-square {
+    width: 10px;
+    height: 10px;
+  }
+
+  .legend-square {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/*-----------------------------------*\
     #RESET
   \*-----------------------------------*/
 
