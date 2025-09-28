@@ -164,15 +164,15 @@
 }
 
 .contribution-square.level-1 {
-  background: hsl(258, 80.3%, 50%);
+  background: hsl(273, 100%, 35%);
 }
 
 .contribution-square.level-2 {
-  background: hsl(258, 80.3%, 65%);
+  background: hsl(258, 80.3%, 50%);
 }
 
 .contribution-square.level-3 {
-  background: hsl(258, 80.3%, 80%);
+  background: hsl(258, 80.3%, 60%);
 }
 
 .contribution-square.level-4 {
@@ -206,15 +206,15 @@
 }
 
 .legend-square.level-1 {
-  background: hsl(258, 80.3%, 50%);
+  background: hsl(273, 100%, 35%);
 }
 
 .legend-square.level-2 {
-  background: hsl(258, 80.3%, 65%);
+  background: hsl(258, 80.3%, 55%);
 }
 
 .legend-square.level-3 {
-  background: hsl(258, 80.3%, 80%);
+  background: hsl(258, 80.3%, 60%);
 }
 
 .legend-square.level-4 {
