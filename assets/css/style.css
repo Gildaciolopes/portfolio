@@ -168,11 +168,11 @@
 }
 
 .contribution-square.level-2 {
-  background: hsl(258, 80.3%, 50%);
+  background: hsl(273, 100%, 50%);
 }
 
 .contribution-square.level-3 {
-  background: hsl(258, 80.3%, 60%);
+  background: hsl(273, 100%, 60%);
 }
 
 .contribution-square.level-4 {
@@ -210,11 +210,11 @@
 }
 
 .legend-square.level-2 {
-  background: hsl(258, 80.3%, 55%);
+  background: hsl(273, 100%, 55%);
 }
 
 .legend-square.level-3 {
-  background: hsl(258, 80.3%, 60%);
+  background: hsl(273, 100%, 60%);
 }
 
 .legend-square.level-4 {
