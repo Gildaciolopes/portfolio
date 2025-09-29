@@ -1,6 +1,5 @@
 // netlify/functions/github-contributions.js
 // Função Netlify para retornar contributionCalendar via GitHub GraphQL
-// Não use dotenv aqui — o Netlify injeta variáveis de ambiente (process.env).
 
 export async function handler(event) {
   try {
@@ -117,7 +116,7 @@ export async function handler(event) {
     });
     days.sort((a, b) => (a.date < b.date ? -1 : 1));
 
-    // Cache control header: permite CDN/cache de borda (ajuste conforme TTL desejado)
+    // Cache control header: permite CDN/cache de borda
     const CACHE_TTL_SECONDS = process.env.CACHE_TTL_SECONDS
       ? Number(process.env.CACHE_TTL_SECONDS)
       : 600; // 10 min

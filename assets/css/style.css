@@ -49,9 +49,9 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
-  /**
-     * typography
-     */
+  /*-----------------------------------*\
+    #Typography
+  \*-----------------------------------*/
 
   /* font-family */
   --ff-poppins: "Poppins", sans-serif;
@@ -92,7 +92,7 @@
 
 /*-----------------------------------*\
     #GITHUB CALENDAR
-  \*-----------------------------------*/
+\*-----------------------------------*/
 
 .github-calendar-card {
   background: var(--bg-gradient-jet);
@@ -179,6 +179,10 @@
   background: var(--purple-primary);
 }
 
+#github-calendar-container:hover {
+  cursor: pointer;
+}
+
 .github-calendar-footer {
   display: flex;
   align-items: center;
@@ -237,7 +241,7 @@
   font-size: var(--fs-5);
 }
 
-/* Responsividade */
+/* Responsive */
 @media (max-width: 768px) {
   .github-calendar-card {
     padding: 16px;
@@ -257,7 +261,7 @@
 
 /*-----------------------------------*\
     #RESET
-  \*-----------------------------------*/
+\*-----------------------------------*/
 
 *,
 *::before,
@@ -319,7 +323,7 @@ body {
 
 /*-----------------------------------*\
     #REUSED STYLE
-  \*-----------------------------------*/
+\*-----------------------------------*/
 
 .sidebar,
 article {
@@ -468,7 +472,7 @@ article.active {
 
 /*-----------------------------------*\
     #MAIN
-  \*-----------------------------------*/
+\*-----------------------------------*/
 
 main {
   margin: 15px 12px;
@@ -478,7 +482,7 @@ main {
 
 /*-----------------------------------*\
     #SIDEBAR
-  \*-----------------------------------*/
+\*-----------------------------------*/
 
 .sidebar {
   margin-bottom: 15px;
@@ -633,7 +637,7 @@ main {
 
 /*-----------------------------------*\
     #NAVBAR
-  \*-----------------------------------*/
+\*-----------------------------------*/
 
 .navbar {
   position: fixed;
@@ -682,8 +686,8 @@ main {
 }
 
 /*-----------------------------------*\
-    #sobre
-  \*-----------------------------------*/
+    #About Me
+\*-----------------------------------*/
 
 .sobre .article-title {
   margin-bottom: 15px;
@@ -700,9 +704,9 @@ main {
   margin-bottom: 15px;
 }
 
-/**
-   * #service 
-   */
+/*-----------------------------------*\
+    #Service
+\*-----------------------------------*/
 
 .service {
   margin-bottom: 15px;
@@ -759,9 +763,9 @@ main {
   line-height: 1.6;
 }
 
-/**
-   * #testimonials 
-   */
+/*-----------------------------------*\
+    #Testimonials
+\*-----------------------------------*/
 
 .testimonials {
   margin-bottom: 30px;
@@ -826,9 +830,9 @@ main {
   overflow: hidden;
 }
 
-/**
-   * #testimonials-modal
-   */
+/*-----------------------------------*\
+    #Testimonial Modal
+\*-----------------------------------*/
 
 .content-card [data-testimonials-date] {
   display: none;
@@ -965,9 +969,9 @@ main {
   line-height: 1.6;
 }
 
-/**
-   * #clients 
-   */
+/*-----------------------------------*\
+    #Clients
+\*-----------------------------------*/
 
 .clients {
   margin-bottom: 15px;
@@ -1017,16 +1021,16 @@ main {
 }
 
 /*-----------------------------------*\
-    #curriculo
-  \*-----------------------------------*/
+    #Resume
+\*-----------------------------------*/
 
 .article-title {
   margin-bottom: 30px;
 }
 
-/**
-   * education and experience 
-   */
+/*-----------------------------------*\
+    #Education and experience
+\*-----------------------------------*/
 
 .timeline {
   margin-bottom: 30px;
@@ -1092,9 +1096,9 @@ main {
   line-height: 1.6;
 }
 
-/**
-   * skills 
-   */
+/*-----------------------------------*\
+    #Skills
+\*-----------------------------------*/
 
 .skills-title {
   margin-bottom: 20px;
@@ -1147,8 +1151,8 @@ main {
 }
 
 /*-----------------------------------*\
-    #projetos
-  \*-----------------------------------*/
+    #Projects
+\*-----------------------------------*/
 
 .filter-list {
   display: none;
@@ -1347,8 +1351,8 @@ main {
 }
 
 /*-----------------------------------*\
-    #artigos
-  \*-----------------------------------*/
+    #Articles
+\*-----------------------------------*/
 
 .artigos-posts {
   margin-bottom: 10px;
@@ -1440,7 +1444,7 @@ main {
 
 /*-----------------------------------*\
     #CONTACT
-  \*-----------------------------------*/
+\*-----------------------------------*/
 
 .mapbox {
   position: relative;
@@ -1569,7 +1573,8 @@ textarea.form-input::-webkit-resizer {
 
 /*-----------------------------------*\
     #RESPONSIVE
-  \*-----------------------------------*/
+\*-----------------------------------*/
+
 @media (min-width: 320px) {
   .avatar-box {
     background: var(--bg-gradient-onyx);
@@ -1603,9 +1608,9 @@ textarea.form-input::-webkit-resizer {
 }
 
 @media (min-width: 450px) {
-  /**
-     * client
-     */
+  /*-----------------------------------*\
+    #Client
+ \*-----------------------------------*/
 
   .clients-item {
     min-width: calc(33.33% - 10px);
@@ -1621,9 +1626,9 @@ textarea.form-input::-webkit-resizer {
     height: 100px;
   }
 
-  /**
-     * #projetos, artigos 
-     */
+  /*-----------------------------------*\
+    #Projects and Articles
+ \*-----------------------------------*/
 
   .project-img,
   .artigos-banner-box {
@@ -1632,14 +1637,14 @@ textarea.form-input::-webkit-resizer {
 }
 
 @media (min-width: 580px) {
-  /**
-     * CUSTOM PROPERTY
-     */
+  /*-----------------------------------*\
+    #Custom Property
+ \*-----------------------------------*/
 
   :root {
-    /**
-       * typography
-       */
+    /*-----------------------------------*\
+      #Typography
+    \*-----------------------------------*/
 
     --fs-1: 32px;
     --fs-2: 24px;
@@ -1650,9 +1655,9 @@ textarea.form-input::-webkit-resizer {
     --fs-8: 12px;
   }
 
-  /**
-     * #REUSED STYLE
-     */
+  /*-----------------------------------*\
+    #Reused Style
+  \*-----------------------------------*/
 
   .sidebar,
   article {
@@ -1678,18 +1683,18 @@ textarea.form-input::-webkit-resizer {
     font-size: 18px;
   }
 
-  /**
-     * #MAIN
-     */
+  /*-----------------------------------*\
+    #Main
+  \*-----------------------------------*/
 
   main {
     margin-top: 60px;
     margin-bottom: 100px;
   }
 
-  /**
-     * #SIDEBAR
-     */
+  /*-----------------------------------*\
+    #Sidebar
+  \*-----------------------------------*/
 
   .avatar-box {
     background: var(--bg-gradient-onyx);
@@ -1759,9 +1764,9 @@ textarea.form-input::-webkit-resizer {
     width: calc(100% - 64px);
   }
 
-  /**
-     * #NAVBAR
-     */
+  /*-----------------------------------*\
+    #Navbar
+  \*-----------------------------------*/
 
   .navbar {
     border-radius: 20px 20px 0 0;
@@ -1775,9 +1780,9 @@ textarea.form-input::-webkit-resizer {
     --fs-8: 14px;
   }
 
-  /**
-     * #sobre
-     */
+  /*-----------------------------------*\
+    #About Me
+  \*-----------------------------------*/
 
   .sobre .article-title {
     margin-bottom: 20px;
@@ -1787,7 +1792,7 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 40px;
   }
 
-  /* service */
+  /* Service */
 
   .service-item {
     display: flex;
@@ -1801,7 +1806,7 @@ textarea.form-input::-webkit-resizer {
     text-align: left;
   }
 
-  /* testimonials */
+  /* Testimonials */
 
   .testimonials-title {
     margin-bottom: 25px;
@@ -1838,7 +1843,7 @@ textarea.form-input::-webkit-resizer {
     -webkit-line-clamp: 2;
   }
 
-  /* testimonials modal */
+  /* Testimonials Modal */
 
   .modal-container {
     padding: 20px;
@@ -1874,7 +1879,7 @@ textarea.form-input::-webkit-resizer {
     width: 35px;
   }
 
-  /* clients */
+  /* Clients */
 
   .clients-list {
     gap: 50px;
@@ -1887,9 +1892,9 @@ textarea.form-input::-webkit-resizer {
     min-width: calc(33.33% - 35px);
   }
 
-  /**
-     * #curriculo
-     */
+  /*-----------------------------------*\
+    #Resume
+  \*-----------------------------------*/
 
   .timeline-list {
     margin-left: 65px;
@@ -1909,9 +1914,9 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 25px;
   }
 
-  /**
-     * #projetos, artigos
-     */
+  /*-----------------------------------*\
+    #Projects and Articles
+  \*-----------------------------------*/
 
   .project-img,
   .artigos-banner-box {
@@ -1926,9 +1931,9 @@ textarea.form-input::-webkit-resizer {
     padding: 25px;
   }
 
-  /**
-     * #CONTACT
-     */
+  /*-----------------------------------*\
+    #Contact
+  \*-----------------------------------*/
 
   .mapbox {
     height: 380px;
@@ -1958,14 +1963,14 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
-/**
-   * responsive larger than 768px screen
-   */
+/*-----------------------------------*\
+    #responsive larger than 768px screen
+  \*-----------------------------------*/
 
 @media (min-width: 768px) {
-  /**
-     * REUSED STYLE
-     */
+  /*-----------------------------------*\
+    #Reused Style
+  \*-----------------------------------*/
 
   #labiras {
     height: 92px;
@@ -1983,28 +1988,28 @@ textarea.form-input::-webkit-resizer {
     width: 100px;
   }
 
-  /**
-     * SIDEBAR
-     */
+  /*-----------------------------------*\
+    #Sidebar
+  \*-----------------------------------*/
 
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
   }
 
-  /**
-     * NAVBAR
-     */
+  /*-----------------------------------*\
+    #Navbar
+  \*-----------------------------------*/
 
   .navbar-link {
     --fs-8: 15px;
   }
 
-  /**
-     * sobre
-     */
+  /*-----------------------------------*\
+    #About Me
+  \*-----------------------------------*/
 
-  /* testimonials modal */
+  /* Testimonials Modal */
 
   .testimonials-modal {
     gap: 35px;
@@ -2015,9 +2020,9 @@ textarea.form-input::-webkit-resizer {
     width: 80px;
   }
 
-  /**
-     * projetos
-     */
+  /*-----------------------------------*\
+    #Projects
+  \*-----------------------------------*/
 
   .article-title {
     padding-bottom: 20px;
@@ -2050,16 +2055,16 @@ textarea.form-input::-webkit-resizer {
     color: var(--purple-primary);
   }
 
-  /* projetos and artigos grid */
+  /* Projects and articles grid */
 
   .project-list,
   .artigos-posts-list {
     grid-template-columns: 1fr 1fr;
   }
 
-  /**
-     * CONTACT
-     */
+  /*-----------------------------------*\
+    #Contact
+  \*-----------------------------------*/
 
   .input-wrapper {
     grid-template-columns: 1fr 1fr;
@@ -2071,28 +2076,28 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
-/**
-   * responsive larger than 1024px screen
-   */
+/*-----------------------------------*\
+  #responsive larger than 1024px screen
+\*-----------------------------------*/
 
 @media (min-width: 1024px) {
-  /**
-     * CUSTOM PROPERTY
-     */
+  /*-----------------------------------*\
+    #Custom Property
+  \*-----------------------------------*/
 
   :root {
-    /**
-      * shadow
-      */
+    /*-----------------------------------*\
+      #Shadow
+    \*-----------------------------------*/
 
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
   }
 
-  /**
-     * REUSED STYLE
-     */
+  /*-----------------------------------*\
+    #Reused Style
+  \*-----------------------------------*/
 
   .sidebar,
   article {
@@ -2100,9 +2105,9 @@ textarea.form-input::-webkit-resizer {
     box-shadow: var(--shadow-5);
   }
 
-  /**
-     * MAIN 
-     */
+  /*-----------------------------------*\
+    #Main
+  \*-----------------------------------*/
 
   .avatar-box {
     background: var(--bg-gradient-onyx);
@@ -2125,9 +2130,9 @@ textarea.form-input::-webkit-resizer {
     margin: auto;
   }
 
-  /**
-     * NAVBAR
-     */
+  /*-----------------------------------*\
+    #Navbar
+  \*-----------------------------------*/
 
   .navbar {
     position: absolute;
@@ -2150,54 +2155,53 @@ textarea.form-input::-webkit-resizer {
     font-weight: var(--fw-500);
   }
 
-  /**
-     * sobre
-     */
+  /*-----------------------------------*\
+    #About Me
+  \*-----------------------------------*/
 
-  /* service */
+  /* Service */
 
   .service-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
   }
 
-  /* testimonials */
+  /* Testimonials */
 
   .testimonials-item {
     min-width: calc(50% - 15px);
   }
 
-  /* clients */
+  /* Clients */
 
   .clients-item {
     min-width: calc(25% - 38px);
   }
 
-  /**
-     * projetos
-     */
+  /*-----------------------------------*\
+    #Projects
+  \*-----------------------------------*/
 
   .project-list {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /**
-     * artigos
-     */
-
+  /*-----------------------------------*\
+    #Articles
+  \*-----------------------------------*/
   .artigos-banner-box {
     height: 230px;
   }
 }
 
-/**
-   * responsive larger than 1250px screen
-   */
+/*-----------------------------------*\
+  #Responsive larger than 1250px screen
+\*-----------------------------------*/
 
 @media (min-width: 1250px) {
-  /**
-     * RESET
-     */
+  /*-----------------------------------*\
+    #Reset
+  \*-----------------------------------*/
   .avatar-box {
     background: var(--bg-gradient-onyx);
     border-radius: 20px;
@@ -2233,9 +2237,9 @@ textarea.form-input::-webkit-resizer {
     height: 60px;
   }
 
-  /**
-     * REUSED STYLE
-     */
+  /*-----------------------------------*\
+    #Reused Style
+  \*-----------------------------------*/
   #labiras {
     height: 95px;
   }
@@ -2251,9 +2255,9 @@ textarea.form-input::-webkit-resizer {
     min-height: 100%;
   }
 
-  /**
-     * MAIN
-     */
+  /*-----------------------------------*\
+    #Main
+  \*-----------------------------------*/
 
   main {
     max-width: 1200px;
@@ -2270,9 +2274,9 @@ textarea.form-input::-webkit-resizer {
     margin: 0;
   }
 
-  /**
-     * SIDEBAR
-     */
+  /*-----------------------------------*\
+    #Sidebar
+  \*-----------------------------------*/
 
   .sidebar {
     position: sticky;
@@ -2334,9 +2338,9 @@ textarea.form-input::-webkit-resizer {
     justify-content: center;
   }
 
-  /**
-       * curriculo
-       */
+  /*-----------------------------------*\
+    #Resume
+  \*-----------------------------------*/
 
   .timeline-text {
     max-width: 700px;
