@@ -1,5 +1,5 @@
 // netlify/functions/github-contributions.js
-// Função Netlify para retornar contributionCalendar via GitHub GraphQL (com semanas iniciando no domingo)
+// Função Netlify para retornar contributionCalendar via GitHub GraphQL
 
 export async function handler(event) {
   try {
@@ -48,21 +48,21 @@ export async function handler(event) {
     }
 
     const GRAPHQL_QUERY = `
-      query($login:String!, $from:DateTime!, $to:DateTime!) {
-        user(login: $login) {
-          contributionsCollection(from: $from, to: $to) {
-            contributionCalendar {
-              weeks {
-                contributionDays {
-                  date
-                  contributionCount
+        query($login:String!, $from:DateTime!, $to:DateTime!) {
+          user(login: $login) {
+            contributionsCollection(from: $from, to: $to) {
+              contributionCalendar {
+                weeks {
+                  contributionDays {
+                    date
+                    contributionCount
+                  }
                 }
               }
             }
           }
         }
-      }
-    `;
+      `;
 
     const body = {
       query: GRAPHQL_QUERY,
@@ -108,20 +108,15 @@ export async function handler(event) {
 
     const weeks =
       json.data.user.contributionsCollection.contributionCalendar.weeks;
-
-    // Reorganizar em formato [ [domingo..sábado], [domingo..sábado], ... ]
-    const calendar = weeks.map((week) => {
-      const days = [...week.contributionDays];
-      // Garantir que o array tenha 7 dias (GraphQL já devolve domingo → sábado, mas vamos reforçar)
-      if (days.length < 7) {
-        const missing = 7 - days.length;
-        for (let i = 0; i < missing; i++) {
-          days.push({ date: null, contributionCount: 0 });
-        }
-      }
-      return days;
+    const days = [];
+    weeks.forEach((w) => {
+      w.contributionDays.forEach((d) =>
+        days.push({ date: d.date, count: d.contributionCount })
+      );
     });
+    days.sort((a, b) => (a.date < b.date ? -1 : 1));
 
+    // Cache control header: permite CDN/cache de borda
     const CACHE_TTL_SECONDS = process.env.CACHE_TTL_SECONDS
       ? Number(process.env.CACHE_TTL_SECONDS)
       : 600; // 10 min
@@ -133,7 +128,7 @@ export async function handler(event) {
         "Access-Control-Allow-Origin": "*",
         "Cache-Control": `public, max-age=${CACHE_TTL_SECONDS}`,
       },
-      body: JSON.stringify({ calendar }),
+      body: JSON.stringify({ days }),
     };
   } catch (err) {
     console.error("Error in function:", err);
