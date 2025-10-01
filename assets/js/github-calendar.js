@@ -70,7 +70,6 @@ class GitHubCalendar {
       )}`;
       const res = await fetch(proxyUrl);
       if (!res.ok) {
-        // Força fallback com mensagem do proxy
         const text = await res.text().catch(() => "");
         throw new Error(`Proxy indisponível: ${res.status} ${text}`);
       }
@@ -82,11 +81,15 @@ class GitHubCalendar {
           date: d.date,
           count: d.count,
         }));
-        // Garantir que array cobre dias completos (não obrigatório pois GraphQL já retorna calendário completo)
+        // Garantir ordenação e normalização
+        this.contributions.sort((a, b) => (a.date < b.date ? -1 : 1));
+        this.contributions = this.contributions.map((c) => ({
+          date: c.date,
+          count: c.count,
+        }));
         this.render();
         return;
       } else {
-        // Proxy respondeu, mas sem dados; cair para fallback
         throw new Error("Proxy retornou dados inválidos ou vazios.");
       }
     } catch (proxyErr) {
@@ -108,6 +111,7 @@ class GitHubCalendar {
 
         // Gerar intervalo de dias dos últimos `daysToShow` dias
         const today = new Date();
+        today.setHours(0, 0, 0, 0);
         const daysToShow = this.options.daysToShow;
         const startBase = new Date(today);
         startBase.setDate(startBase.getDate() - (daysToShow - 1));
@@ -116,8 +120,10 @@ class GitHubCalendar {
         const startDate = new Date(startBase);
         const dayShift = (startDate.getDay() - this.options.weekStart + 7) % 7;
         startDate.setDate(startDate.getDate() - dayShift);
+        startDate.setHours(0, 0, 0, 0);
 
         // Preencher this.contributions com um objeto por dia
+        const contributionsArr = [];
         for (
           let d = new Date(startDate);
           d <= today;
@@ -125,9 +131,10 @@ class GitHubCalendar {
         ) {
           const dateStr = d.toISOString().split("T")[0];
           const count = contributionsMap.get(dateStr) || 0;
-          this.contributions.push({ date: dateStr, count });
+          contributionsArr.push({ date: dateStr, count });
         }
 
+        this.contributions = contributionsArr;
         this.render();
         return;
       } catch (restErr) {
@@ -151,7 +158,7 @@ class GitHubCalendar {
     return 4;
   }
 
-  // ---------- Render helpers ----------
+  // ---------- Render helpers (mantive como antes) ----------
   renderLoading() {
     return `
         <div class="github-calendar-card loading">
@@ -221,16 +228,38 @@ class GitHubCalendar {
   generateCalendarGrid(maxContributions) {
     const weeks = [];
     const today = new Date();
+    // normaliza "hoje" para 00:00:00 (evita problema de timezone)
+    today.setHours(0, 0, 0, 0);
 
     if (!this.contributions || this.contributions.length === 0) {
       return `<div style="color:var(--light-gray)">Nenhuma contribuição registrada.</div>`;
     }
 
-    // Primeiro dia do array (normalmente ordenado asc)
-    const firstDate = new Date(this.contributions[0].date);
+    // Garantir ordenação asc por data
+    this.contributions.sort((a, b) => (a.date < b.date ? -1 : 1));
 
+    // Primeiro dia do array (iso "YYYY-MM-DD")
+    const firstDateIso = this.contributions[0].date;
+    // Criar Date consistente (evita parse ambíguo com timezone)
+    const firstDate = new Date(firstDateIso + "T00:00:00");
+    firstDate.setHours(0, 0, 0, 0);
+
+    // Alinhar startDate ao início da semana (weekStart: 0=Dom,1=Seg)
+    const dayShift = (firstDate.getDay() - this.options.weekStart + 7) % 7;
+    const startDate = new Date(firstDate);
+    startDate.setDate(startDate.getDate() - dayShift);
+    startDate.setHours(0, 0, 0, 0);
+
+    // Criar mapa para lookup rápido: dateStr -> count
+    const contributionsMap = new Map();
+    this.contributions.forEach((c) => {
+      const key = c.date;
+      contributionsMap.set(key, c.count);
+    });
+
+    // Iterar por semanas, do startDate até hoje
     for (
-      let weekStart = new Date(firstDate);
+      let weekStart = new Date(startDate);
       weekStart <= today;
       weekStart.setDate(weekStart.getDate() + 7)
     ) {
@@ -239,11 +268,10 @@ class GitHubCalendar {
       for (let day = 0; day < 7; day++) {
         const currentDate = new Date(weekStart);
         currentDate.setDate(weekStart.getDate() + day);
+        currentDate.setHours(0, 0, 0, 0);
 
         const dateStr = currentDate.toISOString().split("T")[0];
-        // Procurar contribuição (o array pode ser grande; find é suficiente aqui)
-        const contribution = this.contributions.find((c) => c.date === dateStr);
-        const count = contribution ? contribution.count : 0;
+        const count = contributionsMap.get(dateStr) || 0;
 
         if (currentDate <= today) {
           const level = this.getContributionLevel(count, maxContributions);
